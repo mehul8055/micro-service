@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.mehul.training.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;

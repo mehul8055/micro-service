@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.mehul.training.service;
 
 import org.springframework.cloud.openfeign.FeignClient;

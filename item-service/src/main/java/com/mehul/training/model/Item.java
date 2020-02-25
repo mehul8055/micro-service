@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.mehul.training.model;
 
 import javax.persistence.Entity;
