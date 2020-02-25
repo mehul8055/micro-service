@@ -1,0 +1,24 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7681/eureka
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+server:
+  port: 8080
+spring:
+  application:
+    name: item-service
+  datasource:
+    password: Admin@123
+    url: jdbc:mysql://localhost:3306/item-service
+    username: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    show-sql: true
