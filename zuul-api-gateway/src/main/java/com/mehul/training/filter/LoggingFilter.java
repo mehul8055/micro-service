@@ -31,7 +31,8 @@ public class LoggingFilter extends ZuulFilter {
 		// Real logic for filtering requests
 		HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
 		String uri = request.getRequestURI();
-		System.out.println("Request to " + uri + " made at {}" + new Date());
+		// System.out.println("Request to " + uri + " made at {}" + new Date());
+		LOGGER.info("Request to " + uri + " made at {}" + new Date());
 		return null;
 	}
 

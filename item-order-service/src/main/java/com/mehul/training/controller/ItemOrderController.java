@@ -1,5 +1,7 @@
 package com.mehul.training.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,6 +21,8 @@ import com.mehul.training.service.ItemOrderService;
 @RestController
 public class ItemOrderController {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(ItemOrderController.class);
+
 	@Autowired
 	private ItemOrderService service;
 	
@@ -35,6 +39,7 @@ public class ItemOrderController {
 	public ResponseEntity<ItemOrder> placeOrderThroughFeign(@PathVariable Long code, @PathVariable int qnt) {
 		ItemOrder itemOrder = service.placeOrderThroughFeign(code, qnt);
 		ResponseEntity<ItemOrder> resp = new ResponseEntity<>(itemOrder, HttpStatus.OK);
+		LOGGER.info("Inside Item Order Controller {}", itemOrder);
 		return resp;
 	}
 }
