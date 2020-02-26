@@ -1,5 +1,10 @@
 package com.mehul.training.domain;
 
+/**
+ * 
+ * @author mehul8055
+ *
+ */
 public class Number {
 
 	private int minimum;

@@ -3,6 +3,11 @@ package com.mehul.training;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * 
+ * @author mehul8055
+ *
+ */
 @Component
 @ConfigurationProperties("number-service")
 public class NumberConfig {
